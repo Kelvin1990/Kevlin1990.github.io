@@ -1,0 +1,81 @@
+<ion-view view-title="Setting">
+  <ion-content>
+    <div class="item item-divider">
+      Privacy & Sharings
+    </div>
+
+    <ul class="list">
+
+      <li class="item item-toggle">
+        Weight Loss
+        <label class="toggle toggle-positive">
+          <input type="checkbox" onclick="updateWeightLoss()" id="weightLoss">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle">
+        Diet
+        <label class="toggle toggle-positive">
+          <input type="checkbox" onclick="updateDiet()" id="diet">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle">
+        Vege intake
+        <label class="toggle toggle-positive">
+          <input type="checkbox" onclick="updateVegeIntake()" id="vegeIntake">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle">
+        Achievement
+        <label class="toggle toggle-positive">
+          <input type="checkbox" onclick="updateAchievement()" id="achievement">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+    </ul>
+
+    <div class="item item-divider">
+      notifications
+    </div>
+
+    <ul>
+      <li class="item item-toggle">
+        Weekday notification
+        <label class="toggle toggle-positive">
+          <input type="checkbox" onclick="updateWeekday()" id="weekday">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle">
+        Weekend notification
+        <label class="toggle toggle-positive">
+          <input type="checkbox" onclick="updateWeekend()" id="weekend">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+    </br>
+    <div class="item item-divider" href="#">
+    	<center style="color: red" >Log Out</center>
+    </div>
+  </ion-content>
+</ion-view>

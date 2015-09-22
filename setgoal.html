@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    
+    <style>
+    .col img {
+    height: 48px;
+    width: 48px;
+    }
+    .col {
+    text-align: center
+    }       
+    </style>
+    
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="js/setgoal.js"></script>
+
+  </head>
+  
+  <body ng-app="starter" ng-controller="GoalCtrl" onload="readData()">
+    
+    
+
+    <ion-header-bar class="bar bar-header bar-light">
+        <h1 class= "title">Set Goal & Reward</h1>
+    </ion-header-bar>
+
+    <ion-content>
+    <form>
+    <div class="item item-divider">
+      Goal
+    </div>
+
+    <br>
+    
+    <h4 style= "text-align:center">You've Selected</h4>
+        
+        <div class="row">
+        <div class="col col-30 col-offset-10">      
+        <label class="item item-select">
+            <select id="goals">
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </label>
+        </div>
+        <div class="col col-25 col-offset-20">
+            <div class="input-label">Serves Daily</div>
+        </div>
+        </div>
+        
+        <br>
+        
+    <div class="item item-divider">
+      Reward
+    </div>
+
+    <a class="item item-icon-left item-icon-right" ng-click="createReward(1)">
+        Stage 1
+      <span class="item-note"  id="reward1">
+        <i class="icon ion-plus-circled"></i>
+      </span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" ng-click="createReward(2)">
+        Stage 2
+      <span class="item-note" id="reward2">
+        <i class="icon ion-plus-circled"></i>
+      </span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" ng-click="createReward(3)">
+        Stage 3
+      <span class="item-note" id="reward3">
+        <i class="icon ion-plus-circled"></i>
+      </span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" ng-click="createReward(4)">
+        Stage 4
+      <span class="item-note" id="reward4">
+        <i class="icon ion-plus-circled"></i>
+      </span>
+    </a>    
+    
+    
+    <br>
+    
+    <a>
+        <div class = "row center">
+        <div class="col text-center">
+            <button class="center button" onclick="confirmIni()">
+                    <div class="title">Confirm</div>
+            </button>
+        </div>
+        </div>
+    </a>
+    
+    </form>
+    </ion-content>
+  </body>
+</html>
